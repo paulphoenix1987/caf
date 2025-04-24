@@ -89,11 +89,20 @@
             <label for="service1">Service Required (Recital 1):</label>
             <input type="text" id="service1" name="service1" required>
         </div>
+        <div class="form-group">
+            <label for="managerName">Manager Name:</label>
+            <input type="text" id="managerName" name="managerName" required>
+        </div>
+        <div>
+            <label for="signatureUpload">Upload Signature</label>
+            <input type="file" id="signatureUpload" accept="image/*">
+        </div>
         <div class="buttons">
             <button type="button" id="saveBtn">Save as PDF</button>
             <button type="button" id="fillFormBtn">Preview Form</button>
           <!--  <button type="button" id="saveWordBtn">Save as Word</button> -->
         </div>
+        
         <br>
         <div id="previewSection">
             <div class="agreement">
@@ -534,14 +543,15 @@
                 <p>Date</p>
             </div>
             <p style="page-break-before: always;">&nbsp;</p>
-            <div class="agreement">
+            <div class="agreement" id="signaturePreviewWrapper">
                 <p>Executed for <strong>Build Launch Pty Ltd</strong> by its </p>
                 <p>authorised representative:</p>
                 <br>
-                <p>_________</p>
+                <img id="signaturePreview" alt="Signature" style="height: 80px; display: none;">
+                <hr style="width: 150px; border: 0; border-bottom: 1px solid #000; margin: 5px 0;">
                 <p>Signature</p>
                 <br>
-                <p>_________</p>
+                <p><span id="displaymanagerName" style="text-decoration: underline;"></span></p>
                 <p>Name</p>
                 <br>
                 <p>_________</p>
@@ -563,12 +573,30 @@
             const acn = document.getElementById('acn').value;
             const address = document.getElementById('address').value;
             const service1 = document.getElementById('service1').value;
+            const managerName = document.getElementById('managerName').value;
 
             // Update all preview spans with company name
             document.querySelectorAll('#displayCompanyName').forEach(el => el.textContent = companyName);
             document.getElementById('displayACN').textContent = '(ACN ' + acn + ')';
             document.getElementById('displayAddress').textContent = address;
             document.getElementById('displayService1').textContent = service1;
+            document.getElementById('displaymanagerName').textContent = managerName;
+
+            const signatureFile = document.getElementById('signatureUpload').files[0];
+            const signaturePreview = document.getElementById('signaturePreview');
+
+            if (signatureFile && signatureFile.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    signaturePreview.src = e.target.result;
+                    signaturePreview.style.display = 'block';
+                };
+                reader.readAsDataURL(signatureFile);
+            } else {
+                signaturePreview.src = '';
+                signaturePreview.style.display = 'none';
+            }
+
 
             // Show the preview section
             document.getElementById('previewSection').style.display = 'block';
