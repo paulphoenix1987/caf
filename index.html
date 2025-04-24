@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Services Agreement Form</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .agreement {
+            margin: 30px 0;
+            line-height: 1.5;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .psize{
+            font-size: 14.5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        #previewSection{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Client Services Agreement</h1>
+    
+    <form id="agreementForm">
+        <div class="form-group">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="acn">ACN:</label>
+            <input type="text" id="acn" name="acn" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="service1">Service Required (Recital 1):</label>
+            <input type="text" id="service1" name="service1" required>
+        </div>
+        <div class="buttons">
+            <button type="button" id="saveBtn">Save as PDF</button>
+            <button type="button" id="fillFormBtn">Preview Form</button>
+            <button type="button" id="saveWordBtn">Save as Word</button>
+        </div>
+        <br>
+        <div id="previewSection">
+            <div class="agreement">
+                <h3 style="text-align: center; text-decoration: underline;">Client Services Agreement</h3>
+                <p><span id="displayCompanyName" class="bold" style="text-decoration: underline;"></span> <span id="displayACN"></span> of <span id="displayAddress" style="text-decoration: underline;"></span> and</p>
+                <p><strong>Build Launch Pty Ltd</strong> (ABN 58 679 568 211) of 4/24 Waine St, Freshwater, New South Wales, 2096</p>
+                <p class="bold">RECITALS</p>
+                <p>1.<span id="displayCompanyName" style="text-decoration: underline;"></span> wishes to receive a <span class="displayService1" style="text-decoration: underline;"></span>.</p>
+                <p>2. Build Launch has the skills, background and experience in providing Recruiting and Training Expert Talent.</p>
+                <p>3. Build Launch is willing to provide the Services and <span id="displayCompanyName" style="text-decoration: underline;"></span> is willing to appoint Build Launch to provide the Services, all in accordance with the provisions of this Agreement.</p>
+            </div>
+
+            <div class = "agreement">
+                <p class="bold">OPERATIVE CLAUSES</p>
+                <p class="bold">1. Definitions and Interpretation</p>
+                <ol class="psize">
+                    <p><strong>1.1 Definitions</strong>
+                        <p>In this Agreement unless the context indicates otherwise, the following words will have the following meanings:</p>
+                        <p><strong>Background IP </strong>means the Intellectual Property of a Party which was in existence prior to the commencement of this agreement or which is 
+                            subsequently developed by that Party independently of and for purposes unconnected with this agreement.</p>
+                        <p><strong>Claims</strong> means all demands, claims, proceedings, penalties, fines and liability (whether criminal or civil, in contract, tort or otherwise).</p>
+                        <p><strong>Confidential Information </strong>includes any data and or any information received or developed by Build Launch and 
+                            or <span id="displayCompanyName" style="text-decoration: underline;"></span> during the term of this Agreement, which is not publicly available and relates to processes, equipment and techniques used 
+                            by Build Launch and or <span id="displayCompanyName" style="text-decoration: underline;"></span> during their active agreement. This includes all information, data, drawings, specifications, 
+                            documentation, source or object code, designs, construction, workings, functions, features and performance notes, techniques, concepts not reduced to 
+                            material form, agreements with third parties, schematics and proposals and intentions, technical data and marketing information such as customer lists, 
+                            financial information and business plans.
+                        </p>
+                        <p><strong>Consumer Guarantee</strong> means a guarantee applicable to the supply of goods or 
+                            services which is incorporated into this agreement pursuant to division 1 part 3-2 of the Australian Consumer Law.</p>
+                        <p><strong>Contract IP</strong> means Intellectual Property created by the Supplier in the course of performing its obligations under this agreement.</p>
+                        <p><strong>Deliverable</strong> means the goods or services to be supplied by the Supplier pursuant to this agreement.</p>
+                        <p><strong>Facilities</strong> means working space, computer equipment, access to the internet and computer network, telecommunications system etc. 
+                            It includes access to such resources but also use of them to the extent required by the Supplier in order to perform the Services.</p>
+                        <p><strong>Fee(s)</strong> means the fees set out in the Specification.</p>
+                        <p><strong>Force Majeure Event</strong> means any occurrence or omission as a direct or indirect result of which the Party relying on it is prevented from or delayed in performing any of its obligations under this agreement 
+                            and which is beyond the reasonable control of that Party and could not have been prevented or mitigated by reasonable diligence or precautionary measures, 
+                            including forces of nature, natural disasters, acts of terrorism, riots, revolution, 
+                            civil commotion, epidemic, industrial action and action or inaction by a government agency but does not include any act or omission of a subcontractor.</p>
+                        <p><strong>GST Law</strong> means the same as in the A New Tax System (Goods and Services Tax) Act 1999.</p>
+                        <p><strong>Intellectual Property</strong> means all present and future rights conferred by statute, common law or equity in or in relation to any copyright, trademarks, service marks, 
+                            designs, patents, circuit layouts, plant varieties, business and domain names, database rights, confidential information, know how, inventions and other results of intellectual 
+                            activity in the industrial, commercial, scientific, literary or artistic fields existing anywhere in the world, 
+                            whether or not registered or capable of registration, and any goodwill associated with such activity and any applications, renewals and extensions of such rights.</p>
+                        <p><strong>Losses </strong> means all losses including financial losses, damages, legal costs and other expenses of any nature whatsoever.</p>
+                        <p><strong>Parties</strong> means Build Launch and <span id="displayCompanyName" style="text-decoration: underline;"></span>, and <strong>Party</strong> means either one of them.</p>
+                        <p><strong>Personal Information</strong> has the meaning as defined in any applicable Privacy Law.</p>
+                        <p><strong>Privacy Law</strong> means any legislation or administrative requirement (as amended from time to time) imposing an obligation in relation to the collection, use, disclosure, storage and 
+                            transmission of Personal Information which is applicable to a party in the performance of its obligations under this agreement, including without 
+                            limitation any codes, principles or guidelines contained in or arising out of such legislation.</p>
+                        <p><strong>Services</strong> means the services set out in the Specification.</p>
+                        <p><strong>Specification</strong> means the specific Services to be provided by Build Launch under this Agreement. 
+                            The Specification is set out in Schedule 1 of this Agreement.</p>
+                        <p><strong>Supplier's Personnel</strong> means any person or persons that the Supplier designates to perform the Services on the Supplier's behalf.</p>
+                        <p><strong>Client</strong> means the company represented in this agreement. </p>
+                        <p><strong>Termination Date</strong> means the earlier of:</p>
+                        <ul>
+                            <p>(a) the date of termination of this Agreement by <span id="displayCompanyName" style="text-decoration: underline;"></span> or Build Launch; and</p>
+                            <p>(b) the date of expiry of this Agreement.</p>
+                        </ul>
+                    </p>
+                    <br>
+                    <p><strong>2.2 Interpretation</strong>
+                    <p>In this Agreement unless the context otherwise requires:</p>
+                    <p>(a) words importing any gender include every gender;</p>
+                    <p>(b) words importing the singular number include the plural number and vice versa;</p>
+                    <p>(c) words importing persons include firms, companies and corporations and vice versa;</p>
+                    <p>(d) references to numbered clauses, paragraphs and schedules are references to the relevant clause or paragraph in or schedule to this Agreement;</p>
+                    <p>(e) reference in any schedule to this Agreement to numbered paragraphs relate to the numbered paragraphs of that schedule;</p>
+                    <p>(f) any obligation on any Party not to do or omit to do anything is to include an obligation not to allow that thing to be done or omitted to be done;</p>
+                    <p>(g) the headings to the clauses and schedules of this Agreement are not to affect the interpretation;</p>
+                    <p>(h) any reference to an enactment includes reference to that enactment as amended or 
+                        replaced from time to time and to any subordinate legislation or by-law made under that enactment; and</p>
+                    <p>(i) the word "including" (and related forms including "includes") means "including without limitation".</p>
+                    </p>
+                </ol>
+                <br>
+                <p class="bold">2. Services</p>
+                <ol class="psize">
+                    <p>(a) Build Launch will provide the Services to <span id="displayCompanyName" style="text-decoration: underline;"></span> in consideration for <span id="displayCompanyName" style="text-decoration: underline;"></span> paying the Fee to Build Launch, 
+                        subject to the provisions of this agreement.</p>
+                    <p>(b) Build Launch and <span id="displayCompanyName" style="text-decoration: underline;"></span> will agree on the time and place for the performance of the Services.</p>
+                    <p>(c) Build Launch will use reasonable endeavours to complete the Services including the provision of data, 
+                        materials or reports by the dates specified in the Specification or any other dates agreed by the Parties.</p>
+                    <p>(d) The Services will be performed by the employees or agents that Build Launch may choose as most appropriate to 
+                        carry out the Services as agreed, from time to time by the Parties.</p>
+                    <p>(e) The Services to be performed as agreed by the Parties, the time estimates for the provision of 
+                        the particular Services, and the Fee(s) will be set out in the Specification.</p>
+                </ol>
+                <br>
+                <p class="bold">3. Location</p>
+                <ol class="psize">
+                    <p>Build Launch will provide all Services by digital connection (Virtual). The time zone will be determined by the location of the client’s business or services.</p>
+                </ol>
+                <br>
+                <p class="bold">4. Fee(s)</p>
+                <ol class="psize">
+                    <p style="font-weight: bold;">4.1 Payment of Fees</p>
+                    <ul>
+                        <p>(a) In consideration of the provision of the Services in accordance with this agreement, <span id="displayCompanyName" style="text-decoration: underline;"></span> will pay Build Launch the Fee.</p>
+                        <p>(b) Where Build Launch 's charges are based on an hourly rate, any time spent which is less than an hour is charged on a prorated basis.</p>
+                        <p>(c) <span id="displayCompanyName" style="text-decoration: underline;"></span> acknowledges that the Fees are exclusive of any GST that may be charged by Build Launch to <span id="displayCompanyName"></span>, and therefore, Build Launch will be entitled to add on GST.</p>
+                    </ul>
+                    <br>
+                    <p style="font-weight: bold;">4.2 Invoicing</p>
+                    <ul>
+                        <p>(a) Build Launch will provide <span id="displayCompanyName" style="text-decoration: underline;"></span> with a tax invoice in accordance with the GST Law in relation to Fees payable under this clause 4.</p>
+                        <p>(b) Payment will be made by <span id="displayCompanyName" style="text-decoration: underline;"></span> to Build Launch within 7 days after receiving Build Launch 's invoice.</p>
+                        <p>(c) When making a payment, <span id="displayCompanyName" style="text-decoration: underline;"></span> must quote relevant reference numbers and the invoice number.</p>
+                        <p>(d) Payment is to be an upfront charge, prior to the month commencing. </p>
+                        <p>The invoice referred to in clause 4.2(b) must include the following details before payment can be approved and forwarded:</p>
+                        <ul>
+                            <p>(i)    date of Services;</p>
+                            <p>(ii)   name of individual provided by Build Launch;</p>
+                            <p>(iii)  costs and disbursements</p>
+                        </ul>
+                    </ul>
+                    <br>
+                    <p class="bold">4.3. Build Launch is permitted to charge for all costs and expenses incurred in performing the Services, including travelling, photocopying, courier services and postage.</p>
+                    <p class="bold">4.4 Failure to Pay</p>
+                    <p>If <span id="displayCompanyName" style="text-decoration: underline;"></span> does not make a payment by the date stated in an invoice or as otherwise provided for in the agreement, Build Launch is entitled to do any or all of the following:</p>
+                    <ul>
+                        <p>(a) charge interest on the outstanding amount at the rate of 20% per year above the base lending rate of 20, accruing daily;</p>
+                        <p>(b) require <span id="displayCompanyName" style="text-decoration: underline;"></span> to pay, in advance, for any Services (or any part of the Services) which have not yet been performed; and</p>
+                        <p>(c) not perform any further Services (or any part of the Services).</p>
+                    </ul>
+                </ol>
+                <br>
+                <p class="bold">5. Build Launch 's Personnel</p>
+                <ol class="psize">
+                    <p>(a) If <span id="displayCompanyName" style="text-decoration: underline;"></span>:</p>
+                    <ul>
+                        <p>(i)  makes a notice in writing to Build Launch; and</p>
+                        <p>(ii) has reasonable grounds which have been disclosed and discussed with Build Launch, <span id="displayCompanyName" style="text-decoration: underline;"></span> may require 
+                            Build Launch to cease to permit a particular person or persons employed by Build Launch or acting as agent for Build Launch to carry out the Services.</p>
+                    </ul>
+                    <p>If <span id="displayCompanyName" style="text-decoration: underline;"></span> makes the requirement referred to in clause 5(a), Build Launch must, as soon 
+                        as it is practicable:</p>
+                    <ul>
+                        <p>(i) cease to provide the service of the particular person or persons in respect of <span id="displayCompanyName" style="text-decoration: underline;"></span> business; and</p>
+                        <p>(ii) provide the services of an alternative person or persons as may be reasonably acceptable to <span id="displayCompanyName" style="text-decoration: underline;"></span></p>
+                    </ul>
+                </ol>
+                <br>
+                <p class="bold">6. <span id="displayCompanyName"></span>'s Obligations</p>
+                <ol class="psize">
+                    <p>(a) During the preparation of the Specification and performance of the Services <span id="displayCompanyName" style="text-decoration: underline;"></span> will:</p>
+                    <ul>
+                        <p>(i)    cooperate with Build Launch as Build Launch reasonably requires;</p>
+                        <p>(ii)   provide the information and documentation that Build Launch reasonably requires.</p>
+                        <p>(iii)  make available to Build Launch such Facilities as Build Launch reasonably requires; and</p>
+                        <p>(iv)   ensure that <span id="displayCompanyName" style="text-decoration: underline;"></span>'s staff and agents cooperate with and assist Build Launch.</p>
+                    </ul>
+                    <p>(b) <span id="displayCompanyName" style="text-decoration: underline"></span> will not charge for Build Launch 's use of the Facilities made available by <span id="displayCompanyName" style="text-decoration: underline"></span></p>
+                    <p>(c) If <span id="displayCompanyName" style="text-decoration: underline"></span> does not provide the Facilities that Build Launch reasonably requires 
+                        (and within the time period) to perform the Services, then any additional costs and expenses which are reasonably incurred by Build Launch will be paid by <span id="displayCompanyName" style="text-decoration: underline"></span></p>
+                </ol>
+                <br>
+                <p class="bold">7. Placement Guarantee</p>
+                <ol class="psize">
+                    <p class="bold">7.1 Guarantee Period</p>
+                    <p>If any Expert Talent is placed in a permanent role by Build Launch leaves the client within 3 months of commencement (the “Guarantee Period”), Build Launch will 
+                        endeavour to find a replacement at no additional charge to the Client (the “Placement Guarantee”) as long as the following conditions have been met:</p>
+                    <ul>
+                        <p>(a) the Client paid the Placement Fee within 14 days from the relevant tax invoice date;</p>
+                        <p>(b) prior to the expiration of the Guarantee Period the Client advised Build Launch in writing of its intention to call upon the Placement Guarantee;</p>
+                        <p>(c) the original job description and assignment specification do not alter cessation of the employment was not due to restructuring of the role, 
+                            retrenchment or redeployment or substantiated grievance against the Client; and Terms of Business Australia. </p>
+                        <p>(d) Build Launch given the exclusive recruitment opportunity to find a replacement Expert Talent for a period of at least 4 weeks.</p>  
+                        <p>(e) If the Placement Guarantee conditions are not met, the Placement Guarantee is null and void.</p>  
+                    </ul>
+                    <p class="bold">7.2 Reimbursement</p>
+                    <p>If Build Launch is unable to source a suitable replacement Expert Talent after having had a 4 week exclusive period to do so, Build Launch will then (at the Client’s discretion) 
+                        continue to try to find a replacement Expert Talent or credit the Client’s account, the 1 month Retainer Fee, or 
+                        a portion of the Retainer Fee, in accordance with the Fee Schedule. Monthly charges will not occur during the replacement period. </p>
+                </ol>
+                <br>
+                <p class="bold">8. No partnership or employment relationship</p>
+                <ol class="psize">
+                    <p>(a) Nothing in this agreement constitutes the relationship of employer and employee between <span id="displayCompanyName" style="text-decoration: underline;"></span> and Build Launch or 
+                        between <span id="displayCompanyName" style="text-decoration: underline;"></span> and Build Launch 's Personnel.</p>
+                    <p>(b) It is the express intention of the Parties that any such relationships are denied.</p>
+                </ol>
+                <br>
+                <p class="bold">9. Use of subcontractors </p>
+                <ol class="psize">
+                    <p>(a) Build Launch is permitted to use other persons to provide some or all of the Services.</p>
+                    <p>(b) Build Launch is responsible for the work of any of Build Launch 's subcontractors.</p>
+                    <p>(c) Subject to clause 8(d), any work undertaken by any of Build Launch 's subcontractors will be 
+                        undertaken to the same standard as stated in this agreement and the Specification.</p>
+                    <p>(d) To the extent that the terms of any subcontract stipulate a higher standard for any of the Services than the standards set out 
+                        in this agreement (including as to timing or quality), any Services 
+                        provided by the relevant subcontractor will be governed by the terms and conditions of that subcontractor's subcontract.</p>
+                </ol>
+                <br>
+                <p class="bold">10. Disclosure and ownership of intellectual property</p>
+                <ol class="psize">
+                    <p>(a) The Parties agree that, other than as expressly provided in this clause, nothing in this agreement transfers or grants to any Party any right, title or 
+                        interest in or to any Intellectual Property in any Background IP. Build Launch grants to <span id="displayCompanyName" style="text-decoration: underline;"></span> a worldwide, royalty free, perpetual, irrevocable, 
+                        transferable, non-exclusive licence to use the Background IP to the extent necessary for <span id="displayCompanyName" style="text-decoration: underline;"></span> to derive full benefit from its acquisition of 
+                        the Deliverables.</p>
+                    <p>(b) <span id="displayCompanyName" style="text-decoration: underline;"></span> acknowledges that ownership of the Contact IP remains vested in Build Launch. Build Launch grants to <span id="displayCompanyName" style="text-decoration: underline;"></span> an exclusive, perpetual, 
+                        fully paid-up, irrevocable, worldwide licence to use the Contract IP for the sole purpose of enabling <span id="displayCompanyName" style="text-decoration: underline;"></span> to derive full benefit from its 
+                        acquisition of the Deliverables.</p>
+                    <p>(c) Build Launch agrees to indemnify <span id="displayCompanyName" style="text-decoration: underline;"></span> fully against all liabilities, costs and expenses that <span id="displayCompanyName" style="text-decoration: underline;"></span> 
+                        may incur if the Contract IP or Background IP infringes the rights of a third party, save that Build Launch will have no indemnity obligation if any infringement, suspected infringement 
+                        or alleged infringement of the Contract IP or Background IP arises from:</p>
+                    <ul>
+                        <p>(i)   use of the Deliverables in combination by any means and in any form with other goods not specifically approved by Build Launch;</p>
+                        <p>(i)   use of the Deliverables in a manner or for a purpose not reasonably contemplated or not authorised by Build Launch;</p>
+                        <p>(ii)  modification or alteration of the Deliverables without prior consent in writing of Build Launch; or</p>
+                        <p>(iii) any transaction entered into by the Customer relating to the Deliverables without Build Launch 's prior consent in writing.</p>
+                    </ul>
+                    <p>(d) The obligations accepted by Build Launch under this clause 9 survive termination or expiry of this agreement.</p>
+                </ol>
+                <br>
+                <p class="bold">11. Confidentiality</p>
+                <ol class="psize">
+                    <p>(a) A Party which receives Confidential Information (Recipient) from the other Party (Discloser) must keep the Discloser's Confidential Information confidential and not 
+                        deal with it in any way that might prejudice its confidentiality.</p>
+                    <p>(b) The Recipient's obligations in relation to the Confidential Information will continue for as long as the Confidential Information is maintained on a confidential basis 
+                        by the Discloser.</p>
+                    <p>(c) At the Termination Date, or when earlier directed by the Discloser:</p>
+                    <ul>
+                        <p>(i)   all Confidential Information must be returned to the Discloser, including all copies of the Confidential Information or any extracts or summaries of the 
+                            Confidential Information that the Recipient makes and any software that the Recipient creates based on the Confidential Information; and</p>
+                        <p>(ii)  the Recipient must erase and destroy any copies of any software containing or comprising the Confidential Information in the Recipient's possession or 
+                            under the Recipient's control or that may have been loaded onto a computer possessed or controlled by the Recipient.</p>
+                    </ul>
+                    <p>(d) The Confidential Information does not include information which:</p>
+                    <ul>
+                        <p>(i)   is generally available in the public domain otherwise than as a result of a breach of clause 1O(a) by the Recipient; or</p>
+                        <p>(ii)  was known by the Recipient prior to the Discloser, disclosing the information to the Recipient.</p>
+                    </ul>
+                    <p>(e) The Recipient agrees that the Discloser may require any of the Recipient's personnel to sign a confidentiality agreement in a form 
+                        that the Discloser approves, as a condition of the Discloser's acceptance of any of the Recipient's personnel.</p>
+                    <p>(f) The Recipient agrees to indemnify the Discloser fully against all liabilities, costs and expenses which the Discloser may 
+                        incur as a result of any breach of this clause 10 by the Recipient.</p>
+                    <p>(g) The Recipient acknowledges that damages may be an inadequate remedy for breach of this clause 1O and that the Discloser may 
+                        obtain injunctive relief against the Recipient for any breach of this clause 10.</p>
+                    <p>(h) The obligations accepted by the Recipient under this clause 1O survive termination or expiry of this agreement.</p>
+                </ol>
+                <br>
+                <p class="bold">12. Warranties, liability and indemnities</p>
+                <ol class="psize">
+                    <p class="bold">12.1. Warranties</p>
+                    <ul>
+                        <p>(a) Build Launch warrants that it will use reasonable care and skill in performing the Services and to the standard generally 
+                            accepted within the industry, sector or profession in which Build Launch operates for the type of Services provided by Build Launch. </p>
+                        <p>(b) If Build Launch performs the Services (or any part of the Services) negligently or materially in breach of this agreement including 
+                            any part of the Specification, then, if requested by <span id="displayCompanyName" style="text-decoration: underline;"></span> , Build Launch will re-perform the relevant part of the Services, 
+                            subject to clauses 11.6(a) and 11.6(b) below.</p>
+                        <p>(c) <span id="displayCompanyName" style="text-decoration: underline;"></span>'s request referred to in clause 11.1(b) must be made within of the date Build Launch completed performing the Services.</p>
+                    </ul>
+                    <p class="bold">12.2 Insurances</p>
+                    <p>Build Launch must take out the following insurance:</p>
+                    <ul>
+                        <p>(a) worker's compensation insurance as prescribed by law for Build Launch 's Personnel; and</p>
+                        <p>(b) public liability insurance for a minimum of an amount to be agreed for each occurrence.</p>
+                    </ul>
+                    <p class="bold">12.3. Employees and subcontractors</p>
+                    <ul>
+                        <p>(a) Build Launch covenants that Build Launch is solely responsible for payment to Build Launch 's employees and agents of all amounts due by way of salary, superannuation, annual leave, 
+                            long service leave and any other benefits to which they are entitled as Build Launch 's employees or agents.</p>
+                        <p>(b) Build Launch must otherwise comply with legislation applicable to Build Launch 's employees and agents.</p>
+                    </ul>
+                    <p class="bold">12.4. Compliance with all laws</p>
+                    <p>Throughout this agreement Build Launch must comply at Build Launch 's own cost and expense with all acts, ordinances, rules, regulations, other delegated legislation, codes and the requirements of 
+                        any Commonwealth, state and local government departments, bodies, and public authorities or other authority. This requirement applies to Build Launch or to the Services. 
+                        The Build Launch must indemnify <span id="displayCompanyName" style="text-decoration: underline;"></span> from and against all actions, costs, charges, claims and demands in respect of such action, cost, charge, claim and demand.</p>
+                    <p class="bold">12.5. No warranties in relation to completion</p>
+                    <p>Build Launch provides no warranty that any result or objective can or will be achieved or attained at all or by a given completion date any other date, whether stated in this agreement, 
+                        the Specification or elsewhere.</p>    
+                    <p class="bold">12.6. Limitation on liability</p>
+                    <ul>
+                        <p>(a) Except in the case of death or personal injury caused by Build Launch 's negligence, the liability of Build Launch under or in connection with this agreement whether arising in contract, tort, negligence, breach of statutory 
+                            duty or otherwise must not exceed the Fees paid by <span id="displayCompanyName" style="text-decoration: underline;"></span> to Build Launch under this agreement. The provisions of clause 11.6(a) will not apply to clause 11.4.</p>
+                        <p>(b) Neither Party is liable to the other Party in contract, tort, negligence, breach of statutory duty or otherwise for any loss, damage, costs or expenses of any nature whatsoever 
+                            incurred or suffered by that other Party of an indirect or consequential nature including any economic loss or other loss of turnover, profits, business or goodwill. The provisions of this clause do not apply to clause 11.4. 
+                            For the purposes of this subclause, "consequential loss or damage" means any Loss that does not arise naturally and according to the usual course of things as a result of a breach of this agreement or other event 
+                            giving rise to such Loss, whether or not such Loss may reasonably be supposed to have been in the contemplation of the Parties at the time they made this agreement.</p>    
+                        <p>(c) Build Launch 's liability for failure to comply with a Consumer Guarantee is limited to:</p>
+                        <ul>
+                            <p>(i)  in the case of goods supplied to <span id="displayCompanyName" style="text-decoration: underline;"></span>, the replacement of the goods or the supply of equivalent goods (or the payment of the cost to the  <span id="displayCompanyName" style="text-decoration: underline;"></span>` 
+                                of the replacement or supply), or the repair of the goods (or the payment of the cost to the <span id="displayCompanyName" style="text-decoration: underline;"></span> of the repair); and</p>
+                            <p>(ii) in the case of services supplied to <span id="displayCompanyName" style="text-decoration: underline;"></span>, the supply of the services again or the payment of the cost to the <span id="displayCompanyName" style="text-decoration: underline;"></span> of having the services supplied again.</p>   
+                        </ul>
+                    </ul>
+                    <p class="bold">12.7. No reliance</p>
+                    <p>Each of the Parties acknowledges that, in entering into this agreement, it does not do so in reliance on any representation, warranty or other provision except as expressly provided in this agreement. Any conditions, 
+                        warranties or other terms implied by statute or common law are excluded from this agreement to the fullest extent permitted by law.</p>
+                    <p class="bold">12.8. Survival of obligations</p>
+                    <p>The obligations accepted by Build Launch and <span id="displayCompanyName" style="text-decoration: underline;"></span> under this clause 11 survive termination or expiry of this agreement.</p>
+                </ol>
+                <br>
+                <p class="bold">13. Privacy</p>
+                <ol class="psize">
+                    <p>(a) <span id="displayCompanyName" style="text-decoration: underline;"></span> is responsible for obtaining all relevant consents from, and providing all relevant notices to, individuals whose Personal Information 
+                        is provided by <span id="displayCompanyName" style="text-decoration: underline;"></span>to Build Launch in connection with this 
+                        agreement so as to ensure that Build Launch's dealings with that information pursuant to this agreement comply with Build Launch 's obligations under any Privacy Laws.</p>
+                    <p>(b) <span id="displayCompanyName" style="text-decoration: underline;"></span> must indemnify Build Launch against, and must pay Build Launch on demand the amount of, all Losses, liabilities, costs and expenses arising out of 
+                        its failure to comply with clause 12(a).</p>
+                    <p>(c) <span id="displayCompanyName" style="text-decoration: underline;"></span> must:</p>
+                    <ul>
+                        <p>(i)    immediately notify Build Launch if it becomes aware of any unauthorised access to, or unauthorised disclosure of, Personal Information under its control by virtue of this agreement, 
+                            and provide advice as to whether it considers that such security breach may result in serious harm to any individual to whom the information relates;</p>
+                        <p>(ii)   comply with any directive from Build Launch as to which Party will discharge any statutory reporting obligation arising from the incident;</p>
+                        <p>(iii)  conduct or assist Build Launch in conducting a reasonable and expeditious assessment of the breach or suspected breach; and</p>
+                        <p>(iv)   ensure compliance with all mandatory data breach reporting obligations arising out of the breach or suspected breach.</p>
+                    </ul>
+                </ol>
+                <br>
+                <p class="bold">14. Termination</p>
+                <ol class="psize">
+                    <p>(a)  Either Party may terminate this Agreement by notice in writing to the other, if the other Party:</p>
+                    <ul>
+                        <p>(i)   fails to observe any term of this Agreement; and</p>
+                        <p>(ii)  fails to rectify this breach, to the satisfaction of the notifying Party, following the expiration of 7 days’ 
+                            notice of the breach being given in writing by the notifying Party to the other Party.</p>
+                    </ul>
+                    <p>(b) Either Party may terminate this Agreement immediately upon the happening of any of the following events:</p>
+                    <ul>
+                        <p>(i)   if the other Party commits a material breach of the agreement which is incapable of rectification.</p>
+                        <p>(ii)  if <span id="displayCompanyName" style="text-decoration: underline;"></span> enters into a deed of arrangement or an order is made for it to be wound up;</p>
+                        <p>(iii) if an administrator, receiver or receiver/manager or a liquidator is appointed to <span id="displayCompanyName" style="text-decoration: underline;"></span> pursuant to the Corporations Act; or</p>
+                        <p>(iv)  if <span id="displayCompanyName" style="text-decoration: underline;"></span> would be presumed to be insolvent by a court in any of the circumstances referred to in the Corporations Act.</p>
+                    </ul>
+                    <p>(c)  If <span id="displayCompanyName" style="text-decoration: underline"></span> wishes to terminate this agreement, <span id="displayCompanyName" style="text-decoration: underline"></span> must pay Build Launch an additional 1 months’ exit fee, 
+                        as per agreed monthly amount + any current and outstanding fees, expenses or reimbursements payable by <span id="displayCompanyName" style="text-decoration: underline"></span> to Build Launch, in respect of any period prior to the contract 
+                        period end date, must be paid by <span id="displayCompanyName" style="text-decoration: underline"></span> within 7 days after the Termination Date.</p>
+                </ol>
+                <br>
+                <p class="bold">15. General</p>
+                <ol class="psize">
+                    <p class="bold">15.1. Force Majeure</p>
+                    <ul>
+                        <p>(a) Neither Party has any liability under or may be deemed to be in breach of this agreement for any delays or failures in 
+                            performance of this agreement which result from a Force Majeure Event.</p>
+                        <p>The Party affected by these circumstances must promptly notify the other Party in writing when such circumstances 
+                            cause a delay or failure in performance and when they cease to do so.</p>
+                        <p>If such circumstances continue for a continuous period of more than 6 months, either Party may terminate this agreement 
+                            by written notice to the other Party.</p>
+                    </ul>
+                    <p class="bold">15.2.	Amendments</p>
+                    <p>This Agreement may only be amended in writing signed by duly authorised representatives of the Parties.</p>
+                    <p class="bold">15.3.	Assignment</p>
+                    <ul>
+                        <p>(a) Subject to clause (b), neither Party may assign, delegate, subcontract, mortgage, charge or otherwise 
+                            transfer any or all of its rights and obligations under this Agreement without the prior written agreement of the other Party.</p>
+                        <p>(b) A Party may assign and transfer all its rights and obligations under this Agreement to any person to which it transfers all of its 
+                            business, provided that the assignee undertakes in writing to the other Party to be bound by the obligations of the assignor under this Agreement.</p>    
+                    </ul>
+                    <p class="bold">15.4. Entire agreement</p>
+                    <ul>
+                        <p>(a) This Agreement contains the whole agreement between the Parties in respect of the subject matter of the Agreement.</p>
+                        <p>(b) The Parties confirm that they have not entered into this Agreement on the basis of any representation that is not expressly incorporated into this Agreement.</p>
+                    </ul>
+                    <p class="bold">15.5. Waiver</p>
+                    <ul>
+                        <p>(a) No failure or delay by Build Launch in exercising any right, power or privilege under this Agreement will impair the same or operate as a waiver of the same nor 
+                            will any single or partial exercise of any right, power or privilege preclude any further exercise of the same or the exercise of any other right, power or privilege.</p>
+                        <p>(b) The rights and remedies provided in this Agreement are cumulative and not exclusive of any rights and remedies provided by law.</p>
+                    </ul>
+                    <p class="bold">15.6. Agency, partnership etc</p>
+                    <ul>
+                        <p>(a) This Agreement will not constitute or imply any partnership, joint venture, agency, fiduciary relationship or other relationship between the 
+                            Parties other than the contractual relationship expressly provided for in this Agreement.</p>
+                        <p>(b) Neither Party will have, nor represent that it has, any authority to make any commitments on the other Party's behalf.</p>
+                    </ul>
+                    <p class="bold">15.7. Further assurance</p>
+                    <p>Each Party to this Agreement will at the request and expense of the other execute and do any deeds and other things reasonably 
+                        necessary to carry out the provisions of this Agreement or to make it easier to enforce.</p>
+                    <p class="bold">15.8. Severance</p>
+                    <p>If any provision of this Agreement is prohibited by law or judged by a court to be unlawful, void or unenforceable, the provision will, 
+                        to the extent required, be severed from this Agreement and rendered ineffective as far as possible without modifying the remaining provisions of 
+                        this Agreement, and will not in any way affect any other circumstances of or the validity or enforcement of this Agreement.</p>
+                    <p class="bold">15.9. Announcements</p>
+                    <ul>
+                        <p>(a) Subject to clause (b), no Party will issue or make any public announcement or disclose any information regarding this Agreement unless prior 
+                            to such public announcement or disclosure it furnishes the other Party with a copy of such announcement or information and obtains the approval 
+                            of the other Party to its terms.</p>
+                        <p>(b) No Party will be prohibited from issuing or making any such public announcement or disclosing such information if it is necessary to do 
+                            so to comply with any applicable law or the regulations of a recognised stock exchange.</p>
+                    </ul>
+                    <p class="bold">15.10. Notices</p>
+                    <p>A notice or other communication connected with this Agreement has no legal effect unless it is in writing. 
+                        In addition to any other method of service provided by law, the notice may be sent by pre-paid post to the 
+                        address of the addressee as set out in this Agreement or sent by facsimile to the facsimile number of the addressee.</p>
+                    <p class="bold">15.11.	Work, health and safety</p>
+                    <p>Build Launch must comply with all relevant work, health, safety and welfare standards and regulations determined by 
+                        <span id="displayCompanyName" style="text-decoration: underline;"></span> or as prescribed by legislation.</p>
+                    <p class="bold">15.12.	Law and jurisdiction</p>
+                    <p>This Agreement takes effect, is governed by, and will be construed in accordance with the laws from 
+                        time to time in force in New South Wales, Australia. The Parties submit to the non-exclusive jurisdiction of the courts of New South Wales</p>
+                </ol>
+                <p class="bold">16. Talent’s Rights</p>
+                <ol class="psize">
+                    <p class="bold">16.1 Leave </p>
+                    <p>The Talent has the rights to 5 days sick leave and 20 days annual leave per calendar year, on a ‘Full Time’ basis placement role. 
+                        This is factored into the monthly retainer fee, on the accrual basis of 0.41 sick days per month and 1.6 annual leave days per month.
+                        The Talent has no rights to sick leave or annual leave on a ‘Part Time’ basis. </p>
+                    <p class="bold">16.2 Public Holidays </p>
+                    <p>The Talent has the right to Public Holidays where <span id="displayCompanyName"></span> is located and practices its principal work. </p>
+                </ol>
+                <p class="bold">17. Variation</p>
+                <ol class="psize">
+                    <p>A variation to this agreement will take place upon a 12 month review from the start date of this agreement, 
+                        adjusting to suit the level of service provided to the Client, by Build Launch, its Talent and any other services. </p>
+                </ol>
+                <p class="bold">18. Breach of Contract</p>
+                <ol class="psize">
+                    <p>a. Head hunting of Build Launch’s Expert Talent, who is placed with <span id="displayCompanyName" style="text-decoration: underline;"></span>, is a direct breach of this contract. 
+                        If the Expert Talent is found to be working directly for <span id="displayCompanyName" style="text-decoration: underline;"></span>, within the space of a 12 month period since 
+                        the Expert Talent left Build Launch, the Client is agreeing to pay Build Launch Pty Ltd the sum of <u>$25,000.00 + GST</u> as 
+                        a recruitment fee. This is payable within 5 business days from receiving Build Launch’s invoice claim. </p>
+                    <p>b. The Expert Talent accepting the offer from the client, is also in breach of their contract with Build Launch, 
+                        to which they will also be required to make a breakaway payment as per agreement with Build Launch. </p>
+                </ol>
+
+            </div>
+            <p style="page-break-before: always;">&nbsp;</p>
+            <div class="agreement">
+                <p>Executed for <span id="displayCompanyName" style="text-decoration: underline; font-weight: bold;"></span> by its </p>
+                <p>authorised representative:</p>
+                <br>
+                <p>_________</p>
+                <p>Signature</p>
+                <br>
+                <p>_________</p>
+                <p>Name</p>
+                <br>
+                <p>_________</p>
+                <p>Date</p>
+            </div>
+            <p style="page-break-before: always;">&nbsp;</p>
+            <div class="agreement">
+                <p>Executed for <strong>Build Launch Pty Ltd</strong> by its </p>
+                <p>authorised representative:</p>
+                <br>
+                <p>_________</p>
+                <p>Signature</p>
+                <br>
+                <p>_________</p>
+                <p>Name</p>
+                <br>
+                <p>_________</p>
+                <p>Date</p>
+            </div>
+        
+       </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/html-docx-js/dist/html-docx.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/docx.js"></script>
+
+    <script>
+        document.getElementById('fillFormBtn').addEventListener('click', function() {
+            const companyName = document.getElementById('companyName').value;
+            const acn = document.getElementById('acn').value;
+            const address = document.getElementById('address').value;
+            const service1 = document.getElementById('service1').value;
+
+            // Update all preview spans with company name
+            document.querySelectorAll('#displayCompanyName').forEach(el => el.textContent = companyName);
+            document.getElementById('displayACN').textContent = '(ACN ' + acn + ')';
+            document.getElementById('displayAddress').textContent = address;
+            //Service 1 calling via class
+            document.querySelectorAll('.displayService1').forEach(el => el.textContent = service1);
+
+            // Show the preview section
+            document.getElementById('previewSection').style.display = 'block';
+
+            alert('Preview updated with your information.');
+        });
+
+
+        //Save PDF
+        document.getElementById('saveBtn').addEventListener('click', function () {
+        const element = document.getElementById('previewSection');
+        const opt = {
+            margin:       0.5,
+            filename:     'Client_Services_Agreement.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(element).save();
+    });
+
+
+/**
+    //word document
+    document.getElementById('saveWordBtn').addEventListener('click', function () {
+      const content = document.getElementById('previewSection').innerHTML;
+      const header = `
+        <html xmlns:o='urn:schemas-microsoft-com:office:office'
+              xmlns:w='urn:schemas-microsoft-com:office:word'
+              xmlns='http://www.w3.org/TR/REC-html40'>
+        <head><meta charset='utf-8'><title>Export HTML to Word</title></head><body>`;
+      const footer = "</body></html>";
+      const sourceHTML = header + content + footer;
+
+      const blob = window.htmlDocx.asBlob(sourceHTML);
+      window.saveAs(blob, 'Client_Services_Agreement.docx');
+    }); **/
+
+    document.getElementById('saveWordBtn').addEventListener('click', function () {
+    try {
+        // Get the content from the preview section
+        const content = document.getElementById('previewSection').innerHTML;
+        
+        // Create a complete HTML document with proper Word XML namespaces
+        const sourceHTML = `
+            <html xmlns:o='urn:schemas-microsoft-com:office:office' 
+                  xmlns:w='urn:schemas-microsoft-com:office:word' 
+                  xmlns='http://www.w3.org/TR/REC-html40'>
+            <head>
+                <meta charset='utf-8'>
+                <title>Client Services Agreement</title>
+                <style>
+                    body { font-family: 'Poppins', sans-serif; }
+                    .bold { font-weight: bold; }
+                    .psize {font-size: 14.5px; }
+                </style>
+            </head>
+            <body>
+                ${content}
+            </body>
+            </html>
+        `;
+        
+        // Check if the html-docx library is available
+        if (typeof htmlDocx === 'undefined') {
+            throw new Error("HTML-DOCX library not loaded properly");
+        }
+        
+        // Create blob from HTML
+        const blob = htmlDocx.asBlob(sourceHTML);
+        
+        // Check if FileSaver is available
+        if (typeof saveAs === 'undefined') {
+            throw new Error("FileSaver library not loaded properly");
+        }
+        
+        // Save the blob as a .docx file
+        saveAs(blob, 'Client_Services_Agreement.docx');
+        
+        console.log("Word document created successfully");
+    } catch (error) {
+        console.error("Error generating Word document:", error);
+        alert("Error generating Word document: " + error.message);
+    }
+});
+  
+    </script>
+
+
+
+
+
+
+</body>
+</html>
