@@ -43,7 +43,7 @@
             font-weight: bold;
         }
         .psize{
-            font-size: 13px;
+            font-size: 14px;
         }
         button {
             background-color: #4CAF50;
@@ -94,6 +94,29 @@
         <div class="form-group">
             <label for="service1">Service Required (Recital 1):</label>
             <input type="text" id="service1" name="service1" required>
+        </div>
+        <div class="form-group">
+            <label for="roleNeed">Role:</label>
+            <input type="text" id="roleNeed" name="roleNeed" required>
+        </div>
+        <div class="form-group">
+            <label for="industryNeed">Industry:</label>
+            <input type="text" id="industryNeed" name="industryNeed" required>
+        </div>
+        <div class="form-group">
+            <label for="retainerFee">Retainer Fee:</label>
+            <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="text" id="retainerFee" name="retainerFee" required style="width: 100px;">
+            <span>- $3000 AUD</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="contractEndDate">Contract Period End Date:</label>
+            <input type="date" id="contractEndDate" name="contractEndDate" required>
+        </div>
+        <div class="form-group">
+            <label for="hoursWork">Hours of Work:</label>
+            <input type="text" id="hoursWork" name="hoursWork"  placeholder="[E.G. 20 Hours Per Week or 40 Hours Per Week]" required>
         </div>
         <div class="form-group">
             <label for="managerName">Manager Name:</label>
@@ -162,7 +185,7 @@
                         <p><strong>Specification</strong> means the specific Services to be provided by Build Launch under this Agreement. 
                             The Specification is set out in Schedule 1 of this Agreement.</p>
                         <p><strong>Supplier's Personnel</strong> means any person or persons that the Supplier designates to perform the Services on the Supplier's behalf.</p>
-                        <p><strong>Client</strong> means the company represented in this agreement. </p>
+                        <p style="page-break-before: always;"><strong>Client</strong> means the company represented in this agreement. </p>
                         <p><strong>Termination Date</strong> means the earlier of:</p>
                         <ul>
                             <p>(a) the date of termination of this Agreement by <span id="displayCompanyName" style="text-decoration: underline;"></span> or Build Launch; and</p>
@@ -186,12 +209,14 @@
                 </ol>
                 <p style="margin-bottom: 15px;"></p>
                 <p class="bold">2. Services</p>
-                <ol class="psize">
+                <ol class="psize" style="page-break-inside: avoid;">
                     <p>(a) Build Launch will provide the Services to <span id="displayCompanyName" style="text-decoration: underline;"></span> in consideration for <span id="displayCompanyName" style="text-decoration: underline;"></span> paying the Fee to Build Launch, 
                         subject to the provisions of this agreement.</p>
                     <p>(b) Build Launch and <span id="displayCompanyName" style="text-decoration: underline;"></span> will agree on the time and place for the performance of the Services.</p>
                     <p>(c) Build Launch will use reasonable endeavours to complete the Services including the provision of data, 
                         materials or reports by the dates specified in the Specification or any other dates agreed by the Parties.</p>
+                </ol>
+                <ol class="psize">    
                     <p>(d) The Services will be performed by the employees or agents that Build Launch may choose as most appropriate to 
                         carry out the Services as agreed, from time to time by the Parties.</p>
                     <p>(e) The Services to be performed as agreed by the Parties, the time estimates for the provision of 
@@ -203,14 +228,15 @@
                     <p>Build Launch will provide all Services by digital connection (Virtual). The time zone will be determined by the location of the client’s business or services.</p>
                 </ol>
                 
-                <p class="bold" style="page-break-before: always;">4. Fee(s)</p>
-                <ul class="psize">
+                <p class="bold">4. Fee(s)</p>
+                <ul class="psize" style="page-break-inside: avoid;">
                     <p style="font-weight: bold;">4.1 Payment of Fees</p>
                     <ul>
                         <p>(a) In consideration of the provision of the Services in accordance with this agreement, <span id="displayCompanyName" style="text-decoration: underline;"></span> will pay Build Launch the Fee.</p>
                         <p>(b) Where Build Launch 's charges are based on an hourly rate, any time spent which is less than an hour is charged on a prorated basis.</p>
                         <p>(c) <span id="displayCompanyName" style="text-decoration: underline;"></span> acknowledges that the Fees are exclusive of any GST that may be charged by Build Launch to <span id="displayCompanyName"></span>, and therefore, Build Launch will be entitled to add on GST.</p>
                     </ul>
+                
                     <p style="margin-bottom: 15px;"></p>
                     <p style="font-weight: bold;">4.2 Invoicing</p>
                     <ul>
@@ -225,6 +251,8 @@
                             <p>(iii)  costs and disbursements</p>
                         </ul>
                     </ul>
+                </ul>
+                <ul class="psize">    
                     <p style="margin-bottom: 15px;"></p>
                     <p class="bold">4.3. Build Launch is permitted to charge for all costs and expenses incurred in performing the Services, including travelling, photocopying, courier services and postage.</p>
                     <p class="bold">4.4 Failure to Pay</p>
@@ -235,7 +263,7 @@
                         <p>(c) not perform any further Services (or any part of the Services).</p>
                     </ul>
                 </ul>
-                <p style="page-break-before: always;"></p>
+                <p>&nbsp;</p>
                 <p class="bold">5. Build Launch 's Personnel</p>
                 <ol class="psize">
                     <p>(a) If <span id="displayCompanyName" style="text-decoration: underline;"></span>:</p>
@@ -244,7 +272,7 @@
                         <p>(ii) has reasonable grounds which have been disclosed and discussed with Build Launch, <span id="displayCompanyName" style="text-decoration: underline;"></span> may require 
                             Build Launch to cease to permit a particular person or persons employed by Build Launch or acting as agent for Build Launch to carry out the Services.</p>
                     </ul>
-                    <p>If <span id="displayCompanyName" style="text-decoration: underline;"></span> makes the requirement referred to in clause 5(a), Build Launch must, as soon 
+                    <p>(b) If <span id="displayCompanyName" style="text-decoration: underline;"></span> makes the requirement referred to in clause 5(a), Build Launch must, as soon 
                         as it is practicable:</p>
                     <ul>
                         <p>(i) cease to provide the service of the particular person or persons in respect of <span id="displayCompanyName" style="text-decoration: underline;"></span> business; and</p>
@@ -253,12 +281,16 @@
                 </ol>
                 <p style="margin-bottom: 15px;"></p>
                 <p class="bold">6. <span id="displayCompanyName"></span>'s Obligations</p>
-                <ol class="psize">
+                <ol class="psize" style="page-break-inside: avoid;">
                     <p>(a) During the preparation of the Specification and performance of the Services <span id="displayCompanyName" style="text-decoration: underline;"></span> will:</p>
                     <ul>
                         <p>(i)    cooperate with Build Launch as Build Launch reasonably requires;</p>
                         <p>(ii)   provide the information and documentation that Build Launch reasonably requires.</p>
                         <p>(iii)  make available to Build Launch such Facilities as Build Launch reasonably requires; and</p>
+                    </ul>
+                </ol>
+                <ol class="psize">
+                    <ul>
                         <p>(iv)   ensure that <span id="displayCompanyName" style="text-decoration: underline;"></span>'s staff and agents cooperate with and assist Build Launch.</p>
                     </ul>
                     <p>(b) <span id="displayCompanyName" style="text-decoration: underline"></span> will not charge for Build Launch 's use of the Facilities made available by <span id="displayCompanyName" style="text-decoration: underline"></span></p>
@@ -293,7 +325,7 @@
                         between <span id="displayCompanyName" style="text-decoration: underline;"></span> and Build Launch 's Personnel.</p>
                     <p>(b) It is the express intention of the Parties that any such relationships are denied.</p>
                 </ol>
-                <p class="bold" style="page-break-before: avoid;">9. Use of subcontractors </p>
+                <p class="bold" style="page-break-before: always;">9. Use of subcontractors </p>
                 <ol class="psize">
                     <p>(a) Build Launch is permitted to use other persons to provide some or all of the Services.</p>
                     <p>(b) Build Launch is responsible for the work of any of Build Launch 's subcontractors.</p>
@@ -303,7 +335,7 @@
                         in this agreement (including as to timing or quality), any Services 
                         provided by the relevant subcontractor will be governed by the terms and conditions of that subcontractor's subcontract.</p>
                 </ol>
-                <p style="page-break-before: always;"></p>
+                <p>&nbsp;</p>
                 <p class="bold">10. Disclosure and ownership of intellectual property</p>
                 <ol class="psize">
                     <p>(a) The Parties agree that, other than as expressly provided in this clause, nothing in this agreement transfers or grants to any Party any right, title or 
@@ -324,7 +356,7 @@
                     </ul>
                     <p>(d) The obligations accepted by Build Launch under this clause 9 survive termination or expiry of this agreement.</p>
                 </ol>
-                <p class="bold" style="page-break-inside: avoid;">11. Confidentiality</p>
+                <p class="bold" style="page-break-before: always;">11. Confidentiality</p>
                 <ol style="page-break-inside: avoid;"class="psize">
                     <p>(a) A Party which receives Confidential Information (Recipient) from the other Party (Discloser) must keep the Discloser's Confidential Information confidential and not 
                         deal with it in any way that might prejudice its confidentiality.</p>
@@ -383,7 +415,7 @@
                     <p class="bold">12.5. No warranties in relation to completion</p>
                     <p>Build Launch provides no warranty that any result or objective can or will be achieved or attained at all or by a given completion date any other date, whether stated in this agreement, 
                         the Specification or elsewhere.</p>    
-                    <p class="bold" style="page-break-inside: avoid;">12.6. Limitation on liability</p>
+                    <p class="bold" style="page-break-before: always;">12.6. Limitation on liability</p>
                     <ul style="page-break-inside: avoid;">
                         <p>(a) Except in the case of death or personal injury caused by Build Launch 's negligence, the liability of Build Launch under or in connection with this agreement whether arising in contract, tort, negligence, breach of statutory 
                             duty or otherwise must not exceed the Fees paid by <span id="displayCompanyName" style="text-decoration: underline;"></span> to Build Launch under this agreement. The provisions of clause 11.6(a) will not apply to clause 11.4.</p>
@@ -406,7 +438,8 @@
                     <p class="bold">12.8. Survival of obligations</p>
                     <p>The obligations accepted by Build Launch and <span id="displayCompanyName" style="text-decoration: underline;"></span> under this clause 11 survive termination or expiry of this agreement.</p>
                 </ol>
-                <p class="bold">13. Privacy</p>
+                <p>&nbsp;</p>
+                <p class="bold" style="page-break-before: always;">13. Privacy</p>
                 <ol class="psize" style="page-break-inside: avoid;">
                     <p>(a) <span id="displayCompanyName" style="text-decoration: underline;"></span> is responsible for obtaining all relevant consents from, and providing all relevant notices to, individuals whose Personal Information 
                         is provided by <span id="displayCompanyName" style="text-decoration: underline;"></span>to Build Launch in connection with this 
@@ -422,7 +455,8 @@
                         <p>(iv)   ensure compliance with all mandatory data breach reporting obligations arising out of the breach or suspected breach.</p>
                     </ul>
                 </ol>
-                <p class="bold" style="page-break-before: always;">14. Termination</p>
+                <p>&nbsp;</p>
+                <p class="bold">14. Termination</p>
                 <ol class="psize">
                     <p>(a)  Either Party may terminate this Agreement by notice in writing to the other, if the other Party:</p>
                     <ul>
@@ -431,6 +465,8 @@
                             notice of the breach being given in writing by the notifying Party to the other Party.</p>
                     </ul>
                     <p>(b) Either Party may terminate this Agreement immediately upon the happening of any of the following events:</p>
+                </ol>
+                <ol class="psize" style="page-break-before: always;">
                     <ul>
                         <p>(i)   if the other Party commits a material breach of the agreement which is incapable of rectification.</p>
                         <p>(ii)  if <span id="displayCompanyName" style="text-decoration: underline;"></span> enters into a deed of arrangement or an order is made for it to be wound up;</p>
@@ -452,7 +488,7 @@
                         <p>If such circumstances continue for a continuous period of more than 6 months, either Party may terminate this agreement 
                             by written notice to the other Party.</p>
                 </ol>
-                <ol>    
+                <ol class="psize">    
                     </ul>
                     <p class="bold">15.2.	Amendments</p>
                     <p>This Agreement may only be amended in writing signed by duly authorised representatives of the Parties.</p>
@@ -488,12 +524,13 @@
                         to the extent required, be severed from this Agreement and rendered ineffective as far as possible without modifying the remaining provisions of 
                         this Agreement, and will not in any way affect any other circumstances of or the validity or enforcement of this Agreement.</p>
                     
-                    <p style="page-break-before: always;">&nbsp;</p>
                     <p class="bold">15.9. Announcements</p>
                     <ul>
                         <p>(a) Subject to clause (b), no Party will issue or make any public announcement or disclose any information regarding this Agreement unless prior 
                             to such public announcement or disclosure it furnishes the other Party with a copy of such announcement or information and obtains the approval 
                             of the other Party to its terms.</p>
+                    </ul>
+                    <ul style="page-break-before: always;">
                         <p>(b) No Party will be prohibited from issuing or making any such public announcement or disclosing such information if it is necessary to do 
                             so to comply with any applicable law or the regulations of a recognised stock exchange.</p>
                     </ul>
@@ -517,13 +554,13 @@
                     <p class="bold">16.2 Public Holidays </p>
                     <p>The Talent has the right to Public Holidays where <span id="displayCompanyName"></span> is located and practices its principal work. </p>
                 </ol>
-                <p style="page-break-before: always;"></p>
+                <p>&nbsp;</p>
                 <p class="bold">17. Variation</p>
                 <ol class="psize">
                     <p>A variation to this agreement will take place upon a 12 month review from the start date of this agreement, 
                         adjusting to suit the level of service provided to the Client, by Build Launch, its Talent and any other services. </p>
                 </ol>
-                <p class="bold">18. Breach of Contract</p>
+                <p class="bold" style="page-break-before: always;">18. Breach of Contract</p>
                 <ol class="psize">
                     <p>a. Head hunting of Build Launch’s Expert Talent, who is placed with <span id="displayCompanyName" style="text-decoration: underline;"></span>, is a direct breach of this contract. 
                         If the Expert Talent is found to be working directly for <span id="displayCompanyName" style="text-decoration: underline;"></span>, within the space of a 12 month period since 
@@ -563,6 +600,29 @@
                 <p>_________</p>
                 <p>Date</p>
             </div>
+            <p style="page-break-before: always;">&nbsp;</p>
+            <div class="agreement">
+                <p class="bold">SCHEDULE 1 SPECIFICATIONS</p>
+                <ul>
+                    <p style="font-weight: bold;">(a) Services Supplied</p>
+                    <ul>
+                        <p>Role: <span id="displayRoleNeed"></span></p>
+                        <p>Industry: <span id="displayIndustryNeed"></span></p>
+                    </ul>
+                    <p style="font-weight: bold;">(b) Fee</p>
+                    <ul>
+                        <p>Monthly retainer fee for the supply of $<span id="displayRetainerFee"></span>.00 AUD - $3,000.00 AUD per calendar month.</p>
+                        <p>One off Onboarding Fee - $1,500.00 AUD</p>
+                    </ul>
+                    <p style="font-weight: bold;">(c) Time</p>
+                    <ul>
+                        <p>a. The Host will receive the Talent 14 days after training has begun, post selection of Talent by the Host(<span id="displayCompanyName"></span>)</p>
+                        <p>b. Hours of Work: <span id="displayHoursWork"></span></p>
+                        <p>c. Contract period end date: <span id="displayContractEndDate"></span></p>
+                    </ul>
+                </ul>
+
+            </div>
         
        </div>
     </form>
@@ -580,6 +640,11 @@
             const address = document.getElementById('address').value;
             const service1 = document.getElementById('service1').value;
             const managerName = document.getElementById('managerName').value;
+            const industryNeed = document.getElementById('industryNeed').value;
+            const roleNeed = document.getElementById('roleNeed').value;
+            const retainerFee = document.getElementById('retainerFee').value;
+            const contractEndDate = document.getElementById('contractEndDate').value;
+            const hoursWork = document.getElementById('hoursWork').value;
 
             // Update all preview spans with company name
             document.querySelectorAll('#displayCompanyName').forEach(el => el.textContent = companyName);
@@ -588,6 +653,11 @@
             //Service 1 calling via class
             document.querySelectorAll('.displayService1').forEach(el => el.textContent = service1);
             document.getElementById('displaymanagerName').textContent = managerName;
+            document.getElementById('displayRoleNeed').textContent = roleNeed;
+            document.getElementById('displayIndustryNeed').textContent = industryNeed;
+            document.getElementById('displayRetainerFee').textContent = retainerFee;
+            document.getElementById('displayContractEndDate').textContent = contractEndDate;
+            document.getElementById('displayHoursWork').textContent = hoursWork;
 
             const signatureFile = document.getElementById('signatureUpload').files[0];
             const signaturePreview = document.getElementById('signaturePreview');
