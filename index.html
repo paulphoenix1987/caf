@@ -106,9 +106,18 @@
         <div class="form-group">
             <label for="retainerFee">Retainer Fee:</label>
             <div style="display: flex; align-items: center; gap: 8px;">
-            <input type="text" id="retainerFee" name="retainerFee" required style="width: 100px;">
-            <span>- $3000 AUD</span>
+            <input type="number" id="retainerFee" name="retainerFee" required style="width: 100px; height: 25px;" placeholder="[e.g. 1000, 2000, or 3000]">
             </div>
+        </div>
+        <div class="form-group">
+            <label for="onboardingFee">Onboarding Fee:</label>
+            <div style="display: flex; align-items: center; gap: 8px;">
+            <input type="number" id="onboardingFee" name="onboardingFee" required style="width: 100px; height: 25px;" placeholder="[e.g. 1000, 2000, or 3000]">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="contractStartDate">Contract Period Start Date:</label>
+            <input type="date" id="contractStartDate" name="contractStartDate" required>
         </div>
         <div class="form-group">
             <label for="contractEndDate">Contract Period End Date:</label>
@@ -117,6 +126,14 @@
         <div class="form-group">
             <label for="hoursWork">Hours of Work:</label>
             <input type="text" id="hoursWork" name="hoursWork"  placeholder="[E.G. 20 Hours Per Week or 40 Hours Per Week]" required>
+        </div>
+        <div class="form-group">
+            <label for="contractType">Contract Type:</label>
+            <select id="contractType" name="contractType">
+                <option value="" disabled selected>Select Contract type</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="managerName">Manager Name:</label>
@@ -616,14 +633,16 @@
                     </ul>
                     <p style="font-weight: bold;">(b) Fee</p>
                     <ul>
-                        <p>Monthly retainer fee for the supply of $<span id="displayRetainerFee"></span>.00 AUD - $3,000.00 AUD per calendar month.</p>
-                        <p>One off Onboarding Fee - $1,500.00 AUD</p>
+                        <p>Monthly retainer fee for the supply of $<span id="displayRetainerFee"></span>.00 AUD per calendar month.</p>
+                        <p>One off Onboarding Fee - $<span id="displayOnboardingFee"></span>.00 AUD</p>
                     </ul>
                     <p style="font-weight: bold;">(c) Time</p>
                     <ul>
                         <p>a. The Host will receive the Talent 14 days after training has begun, post selection of Talent by the Host(<span id="displayCompanyName"></span>)</p>
                         <p>b. Hours of Work: <span id="displayHoursWork"></span></p>
-                        <p>c. Contract period end date: <span id="displayContractEndDate"></span></p>
+                        <p>c. Contract period start date: <span id=displayContractStartDate></span></p>
+                        <p>d. Contract period end date: <span id="displayContractEndDate"></span></p>
+                        <p>e. Contract Type: <span id="displayContractType"></span></p>
                     </ul>
                 </ul>
 
@@ -648,8 +667,11 @@
             const industryNeed = document.getElementById('industryNeed').value;
             const roleNeed = document.getElementById('roleNeed').value;
             const retainerFee = document.getElementById('retainerFee').value;
+            const contractStartDate = document.getElementById('contractStartDate').value;
             const contractEndDate = document.getElementById('contractEndDate').value;
             const hoursWork = document.getElementById('hoursWork').value;
+            const contractType = document.getElementById('contractType').value;
+            const onboardingFee = document.getElementById('onboardingFee').value;
 
             // Update all preview spans with company name
             document.querySelectorAll('#displayCompanyName').forEach(el => el.textContent = companyName);
@@ -661,8 +683,11 @@
             document.getElementById('displayRoleNeed').textContent = roleNeed;
             document.getElementById('displayIndustryNeed').textContent = industryNeed;
             document.getElementById('displayRetainerFee').textContent = retainerFee;
+            document.getElementById('displayContractStartDate').textContent = contractStartDate;
             document.getElementById('displayContractEndDate').textContent = contractEndDate;
             document.getElementById('displayHoursWork').textContent = hoursWork;
+            document.getElementById('displayContractType').textContent = contractType;
+            document.getElementById('displayOnboardingFee').textContent = onboardingFee;
 
             const signatureFile = document.getElementById('signatureUpload').files[0];
             const signaturePreview = document.getElementById('signaturePreview');
