@@ -135,7 +135,7 @@
         <div class="buttons">
             <button type="button" id="saveBtn">Save as PDF</button>
             <button type="button" id="fillFormBtn">Preview Form</button>
-            <button type="button" id="saveWordBtn">Save as Word</button>
+        <!--    <button type="button" id="saveWordBtn">Save as Word</button> -->
         </div>
         <br>
         <div id="previewSection">
@@ -778,7 +778,7 @@
       const blob = window.htmlDocx.asBlob(sourceHTML);
       window.saveAs(blob, 'Client_Services_Agreement.docx');
     }); **/
-
+/*
     document.getElementById('saveWordBtn').addEventListener('click', function () {
     try {
         // Get the content from the preview section
@@ -803,8 +803,8 @@
             top: 0;
             left: 0;
             z-index: -1;
-            width: 778px; /* 20.56 cm */
-            height: 92px;  /* 2.43 cm */
+            width: 778px; 
+            height: 92px;  
             }
 
             body {
@@ -845,7 +845,7 @@
         console.error("Error generating Word document:", error);
         alert("Error generating Word document: " + error.message);
     }
-});
+}); */
   
     </script>
 
