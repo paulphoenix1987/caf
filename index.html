@@ -587,6 +587,7 @@
                 <p>Executed for <span id="displayCompanyName" style="text-decoration: underline; font-weight: bold;"></span> by its </p>
                 <p>authorised representative:</p>
                 <br>
+                <br>
                 <hr style="width: 150px; border: 0; border-bottom: 1px solid #000; margin: 5px 0;">
                 <p>Signature</p>
                 <br>
@@ -600,6 +601,7 @@
             <div class="agreement" id="signaturePreviewWrapper">
                 <p>Executed for <strong>Build Launch Pty Ltd</strong> by its </p>
                 <p>authorised representative:</p>
+                <br>
                 <br>
                 <hr style="width: 150px; border: 0; border-bottom: 1px solid #000; margin: 5px 0;">
                 <p>Signature</p>
@@ -650,7 +652,7 @@
             const acn = document.getElementById('acn').value;
             const address = document.getElementById('address').value;
             const service1 = document.getElementById('service1').value;
-            const managerName = document.getElementById('managerName').value;
+            //const managerName = document.getElementById('managerName').value;
             const industryNeed = document.getElementById('industryNeed').value;
             const retainerFee = document.getElementById('retainerFee').value;
             const contractStartDate = document.getElementById('contractStartDate').value;
@@ -665,7 +667,7 @@
             document.getElementById('displayAddress').textContent = address;
             //Service 1 calling via class
             document.querySelectorAll('.displayService1').forEach(el => el.textContent = service1);
-            document.getElementById('displaymanagerName').textContent = managerName;
+            //document.getElementById('displaymanagerName').textContent = managerName;
             document.getElementById('displayIndustryNeed').textContent = industryNeed;
             document.getElementById('displayRetainerFee').textContent = retainerFee;
             document.getElementById('displayContractStartDate').textContent = contractStartDate;
@@ -673,7 +675,7 @@
             document.getElementById('displayHoursWork').textContent = hoursWork;
             document.getElementById('displayContractType').textContent = contractType;
             document.getElementById('displayOnboardingFee').textContent = onboardingFee;
-
+        /*
             const signatureFile = document.getElementById('signatureUpload').files[0];
             const signaturePreview = document.getElementById('signaturePreview');
 
@@ -688,7 +690,7 @@
                 signaturePreview.src = '';
                 signaturePreview.style.display = 'none';
             }
-
+            */
 
             // Show the preview section
             document.getElementById('previewSection').style.display = 'block';
