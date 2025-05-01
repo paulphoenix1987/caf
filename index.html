@@ -92,13 +92,10 @@
         </div>
         
         <div class="form-group">
-            <label for="service1">Service Required (Recital 1):</label>
+            <label for="service1">Job Description:</label>
             <input type="text" id="service1" name="service1" required>
         </div>
-        <div class="form-group">
-            <label for="roleNeed">Role:</label>
-            <input type="text" id="roleNeed" name="roleNeed" required>
-        </div>
+
         <div class="form-group">
             <label for="industryNeed">Industry:</label>
             <input type="text" id="industryNeed" name="industryNeed" required>
@@ -155,7 +152,7 @@
                 <p><span id="displayCompanyName" class="bold" style="text-decoration: underline;"></span> <span id="displayACN"></span> of <span id="displayAddress" style="text-decoration: underline;"></span> and</p>
                 <p><strong>Build Launch Pty Ltd</strong> (ABN 58 679 568 211) of 4/24 Waine St, Freshwater, New South Wales, 2096</p>
                 <p class="bold">RECITALS</p>
-                <p>1.<span id="displayCompanyName" style="text-decoration: underline;"></span> wishes to receive a <span class="displayService1" style="text-decoration: underline;"></span>.</p>
+                <p>1.<span id="displayCompanyName" style="text-decoration: underline;"></span> wishes to receive a Virtual Professional, with the Job Description: <span class="displayService1" style="text-decoration: underline;"></span>.</p>
                 <p>2. Build Launch has the skills, background and experience in providing Recruiting and Training Expert Talent.</p>
                 <p>3. Build Launch is willing to provide the Services and <span id="displayCompanyName" style="text-decoration: underline;"></span> is willing to appoint Build Launch to provide the Services, all in accordance with the provisions of this Agreement.</p>
             </div>
@@ -628,21 +625,20 @@
                 <ul>
                     <p style="font-weight: bold;">(a) Services Supplied</p>
                     <ul>
-                        <p>Role: <span id="displayRoleNeed"></span></p>
+                        <p>Role: <span class="displayService1"></span></p>
                         <p>Industry: <span id="displayIndustryNeed"></span></p>
                     </ul>
                     <p style="font-weight: bold;">(b) Fee</p>
                     <ul>
-                        <p>Monthly retainer fee for the supply of $<span id="displayRetainerFee"></span>.00 AUD per calendar month.</p>
+                        <p>Monthly retainer fee for the supply of <span class="displayService1"></span> $<span id="displayRetainerFee"></span>.00 AUD per calendar month.</p>
                         <p>One off Onboarding Fee - $<span id="displayOnboardingFee"></span>.00 AUD</p>
                     </ul>
                     <p style="font-weight: bold;">(c) Time</p>
                     <ul>
-                        <p>a. The Host will receive the Talent 14 days after training has begun, post selection of Talent by the Host(<span id="displayCompanyName"></span>)</p>
-                        <p>b. Hours of Work: <span id="displayHoursWork"></span></p>
-                        <p>c. Contract period start date: <span id=displayContractStartDate></span></p>
-                        <p>d. Contract period end date: <span id="displayContractEndDate"></span></p>
-                        <p>e. Contract Type: <span id="displayContractType"></span></p>
+                        <p>a. Hours of Work: <span id="displayHoursWork"></span></p>
+                        <p>b. Contract period start date: <span id=displayContractStartDate></span></p>
+                        <p>c. Contract period end date: <span id="displayContractEndDate"></span></p>
+                        <p>d. Contract Type: <span id="displayContractType"></span></p>
                     </ul>
                 </ul>
 
@@ -665,7 +661,6 @@
             const service1 = document.getElementById('service1').value;
             const managerName = document.getElementById('managerName').value;
             const industryNeed = document.getElementById('industryNeed').value;
-            const roleNeed = document.getElementById('roleNeed').value;
             const retainerFee = document.getElementById('retainerFee').value;
             const contractStartDate = document.getElementById('contractStartDate').value;
             const contractEndDate = document.getElementById('contractEndDate').value;
@@ -680,7 +675,6 @@
             //Service 1 calling via class
             document.querySelectorAll('.displayService1').forEach(el => el.textContent = service1);
             document.getElementById('displaymanagerName').textContent = managerName;
-            document.getElementById('displayRoleNeed').textContent = roleNeed;
             document.getElementById('displayIndustryNeed').textContent = industryNeed;
             document.getElementById('displayRetainerFee').textContent = retainerFee;
             document.getElementById('displayContractStartDate').textContent = contractStartDate;
