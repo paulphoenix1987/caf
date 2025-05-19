@@ -31,9 +31,19 @@
         input[type="text"] {
             width: 100%;
             padding: 8px;
-            border: 1px solid #ccc;
+            border: 1px solid #b6b659;
             border-radius: 4px;
         }
+        textarea {
+            padding: 10px 12px;
+            border: 2px solid #b6b659;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical; /* optional: allow vertical resizing only */
+            outline: none;
+            background-color: #fff;
+            width: 100%;
+            }
         .agreement {
             margin: 15px 0;
             line-height: 1.5;
@@ -131,6 +141,10 @@
                 <option value="Full-Time">Full-Time</option>
                 <option value="Part-Time">Part-Time</option>
             </select>
+        </div>
+        <div class="form-group">
+            <label for="additionalTerms">Additional Terms:</label>
+            <textarea id="additionalTerms" name="additionalTerms"  placeholder="Add your Additional Terms here..."></textarea>
         </div>
         <div class="buttons">
             <button type="button" id="saveBtn">Save as PDF</button>
@@ -636,6 +650,14 @@
                 </ul>
 
             </div>
+            <div id="additionalTermsSection" style="display: none;">
+                <p style="page-break-before: always;">&nbsp;</p>
+                <div class="agreement">
+                    <p class="bold">Additional Terms</p>
+                    <span id="displayAdditionalTerms"></span>
+                    
+                </div>
+            </div>
         
        </div>
     </form>
@@ -656,7 +678,9 @@
             return `${day}/${month}/${year}`;
         }
 
-        
+
+
+
         document.getElementById('fillFormBtn').addEventListener('click', function() {
             const companyName = document.getElementById('companyName').value;
             const acn = document.getElementById('acn').value;
@@ -665,15 +689,24 @@
             //const managerName = document.getElementById('managerName').value;
             const industryNeed = document.getElementById('industryNeed').value;
             const retainerFee = document.getElementById('retainerFee').value;
-            const contractStartDate = document.getElementById('contractStartDate').value;
-            const contractEndDate = document.getElementById('contractEndDate').value;
             const hoursWork = document.getElementById('hoursWork').value;
             const contractType = document.getElementById('contractType').value;
             const onboardingFee = document.getElementById('onboardingFee').value;
-            
+            const contractStartDate = document.getElementById('contractStartDate').value;
+            const contractEndDate = document.getElementById('contractEndDate').value;
+            const additionalTerms = document.getElementById('additionalTerms').value.trim();
+            const additionalTermsSection = document.getElementById('additionalTermsSection');
+
+            if (additionalTerms !== '') {
+                document.getElementById('displayAdditionalTerms').innerHTML = additionalTerms.replace(/\n/g, '<br>');
+                additionalTermsSection.style.display = 'block';
+            } else {
+                additionalTermsSection.style.display = 'none';
+            }
+
+
             const formattedStartDate = formatDateToAustralian(contractStartDate);
             const formattedEndDate = formatDateToAustralian(contractEndDate);
-            
 
             // Update all preview spans with company name
             document.querySelectorAll('#displayCompanyName').forEach(el => el.textContent = companyName);
@@ -685,10 +718,11 @@
             document.getElementById('displayIndustryNeed').textContent = industryNeed;
             document.getElementById('displayRetainerFee').textContent = retainerFee;
 
-            
+
             document.getElementById('displayContractStartDate').textContent = formattedStartDate;
             document.getElementById('displayContractEndDate').textContent = formattedEndDate;
-            
+
+
             document.getElementById('displayHoursWork').textContent = hoursWork;
             document.getElementById('displayContractType').textContent = contractType;
             document.getElementById('displayOnboardingFee').textContent = onboardingFee;
